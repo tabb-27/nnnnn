@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long N;
+    cin >> N;
+
+    if (N <= 0) {
+        cout << "Error" << endl;
+        return 0;
+    }
+
+    int count = 0;
+    long long sum = 0;
+
+    for (int i = 1; i <= N; i++) {
+        if (N % i == 0) { // i là ước số
+            count++; // tăng số lượng ước số
+            if (i % 3 == 0 && i % 5 != 0) { // chia hết cho 3 và không chia hết cho 5
+                sum += i; // cộng vào tổng
+            }
+        }
+    }
+
+    cout << count << endl;
+    cout << sum << endl;
+
+    return 0;
+}
