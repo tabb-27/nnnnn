@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    int res = 25000;
+    scanf("%d",&x);
+    
+    if (x<0){
+        printf("ERROR");
+        return 0;
+    }
+    
+    if (x <= 50){
+        res += x * 600;
+    }
+    else if (x>=51 && x>=200){
+        res += 50*600 + (x-50)*400;
+    }
+    else{
+        res += 50*600 + 150*400 + (x-200)*200;
+    }
+    
+    printf("%d",res);
+}
