@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c,d,e,f;
+    scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);
+
+    double temp1 = e*(a/(double)d);
+    double temp2 = f*(a/(double)d);
+
+    double x,y;
+    
+    //printf("%.6f\n",temp1);
+    //printf("%.6f\n",temp2);
+
+
+    if (temp2 - c == 0){
+        if (temp1 - b == 0){
+            printf("he phuong trinh vo so nghiem");
+            return 0;
+        }
+        else{
+            y = 0;
+            x = c/a;
+        }
+    }
+    else{
+        if (temp1 - b == 0){
+            printf("he phuong trinh vo nghiem");
+            return 0;
+        }
+        else{
+
+            y = (temp2 - c)/(double)(temp1 - b);
+            x = (c - b*y)/(double)a;
+
+        }
+    }
+
+    printf("%.2f",x);
+    printf(" ");
+    printf("%.2f",y);
+
+    return 0;
+}
