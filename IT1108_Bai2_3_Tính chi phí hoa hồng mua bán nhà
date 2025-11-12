@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    long double d;
+    scanf("%Lf",&d);
+    
+    long double rose = 0;
+    
+    if (d > 50000000){
+      //printf("B");
+      rose = d*0.08;
+    }
+    else if (d > 25000000){
+        rose = d*0.05;
+    }
+    else if (d > 10000000){
+        rose = d * 0.02;
+    }
+    
+    printf("%.0Lf",rose);
+}
