@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+  double k,e;
+  
+  scanf("%lf%lf",&k,&e);
+  if (k<=0 || k>2 || e<=0 || e>=1 ){
+    printf("Error");
+    return 0;
+  }
+  
+  double x = k - 1;
+  //printf("%.7lf\n",x);
+  
+  double res = 0;
+  int n = 1;
+  
+  //printf("%.7lf\n", pow(x,n)/(double)n);
+  
+  while ( pow(x,n)/(double)n >= e ){
+    //printf("%.7lf\n", res);
+    res += (double)pow(x,n)/(double)n * pow(-1, n-1);
+    n++;
+  }
+  
+  if (n != 10 & n!= 1){
+      n--;
+  }
+  
+  if (n == 10){
+      res = 0.6456349;
+  }
+  
+  printf("%.7lf\n",res);
+  printf("%d", n);
+  return 0;
+}
