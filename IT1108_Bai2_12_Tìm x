@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int x = 0;
+    int sum = 0;
+    
+    while (sum <= n){
+        x++;
+        sum += x;
+    }
+    
+    printf("%d",x-1);
+}
